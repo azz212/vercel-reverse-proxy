@@ -3,6 +3,12 @@
     { "source": "/proxy/:match/:url*", "destination": "https://:match/:url*" },
     { "source": "/proxy/:match/:url*/", "destination": "https://:match/:url*/" },
     { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" },
-    { "source": "/httpproxy/:match/:url*/", "destination": "http://:match/:url*/" }
+    { "source": "/httpproxy/:match/:url*/", "destination": "http://:match/:url*/" },
+    { "source": "/", "destination": "https://api.openai.com" },
+        {
+            "source": "/:match*",
+            "destination": "https://api.openai.com/:match*"
+        }
+    ]
   ]
 }
